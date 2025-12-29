@@ -1,0 +1,14 @@
+adguard.lab {
+	reverse_proxy localhost:8080
+	tls internal
+}
+ 
+seafile.lab {
+	reverse_proxy localhost:8081
+	tls internal
+}
+
+immich.lab {
+	reverse_proxy localhost:8082
+	tls internal
+}

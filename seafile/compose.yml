@@ -1,0 +1,34 @@
+name: seafile
+
+services:
+  database:
+    container_name: seafile_mariadb
+    image: docker.io/library/mariadb:10.6
+    volumes: ${DB_LOCATION}:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+      MYSQL_LOG_CONSOLE: true
+    restart: always
+
+  cache:
+    container_name: seafile_memcached
+    image: docker.io/library/memcached:1.6.32
+    restart: always
+
+  seafile_server:
+    container_name: seafile_server
+    image: docker.io/seafileltd/seafile-mc:11.0.12
+    volumes: ${DATA_LOCATION}:/shared
+    environment:
+      DB_HOST: database
+      DB_ROOT_PASSWD: ${DB_ROOT_PASSWORD}
+      SEAFILE_ADMIN_EMAIL: ${SEAFILE_ADMIN_EMAIL}
+      SEAFILE_ADMIN_PASSWORD: ${SEAFILE_ADMIN_PASSWORD}
+      SEAFILE_SERVER_HOSTNAME: ${SEAFILE_SERVER_HOSTNAME}
+      SEAFILE_SERVER_LETSENCRYPT: false
+      FORCE_HTTPS_IN_CONF: true
+    ports: '8081:80'
+    depends_on:
+      - database
+      - cache
+    restart: always

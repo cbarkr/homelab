@@ -1,0 +1,14 @@
+name: adguardhome
+
+services:
+  server:
+    container_name: adguardhome_server
+    image: docker.io/adguard/adguardhome:v0.107.71
+    volumes:
+      - ${WORK_DIR}:/opt/adguardhome/work
+      - ${CONF_DIR}:/opt/adguardhome/conf
+    ports:
+      - '5300:53/udp'
+      - '5300:53/tcp'
+      - '8080:80/tcp'
+    restart: always

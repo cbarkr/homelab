@@ -6,6 +6,8 @@ Defines the steps to deploy Seafile with Docker/Podman Compose
 
 ## Configuration
 
+Set the following environment variables in `.env`:
+
 ```bash
 DB_LOCATION=<...>
 DATA_LOCATION=<...>

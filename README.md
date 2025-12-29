@@ -1,11 +1,15 @@
 # Homelab
 
-Defines the steps to deploy various services in my homelab using Docker/Podman Compose
+Defines the specifications and configurations for services running in my homelab
+
+## Goals
+
+- Services should be run as rootless (Podman) containers
+- Free and open-source software (FOSS) should always be the first choice
+- Deploying services to a new environment should be fast and easy (using automated methods)
 
 ## Structure
 
-Each service is defined by a directory which contains the following files:
-
-- `compose.yml`: The [Compose file](https://docs.docker.com/reference/compose-file/) which defines each of the microservices
-- `.env`: Environment variables to configure the service
-- `README.md`: Documentation for the service
+- `bin`: Scripts and executables
+- `etc`: Configuration files for system services
+- `services`: Service definitions

@@ -6,6 +6,8 @@ Defines the steps to deploy Immich with Docker/Podman Compose
 
 ## Configuration
 
+Set the following environment variables in `.env`:
+
 ```bash
 UPLOAD_LOCATION=<...>
 DB_DATA_LOCATION=<...>

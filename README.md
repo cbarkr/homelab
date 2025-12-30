@@ -12,4 +12,4 @@ Defines the specifications and configurations for services running in my homelab
 
 - `bin`: Scripts and executables
 - `etc`: Configuration files for system services
-- `services`: Service definitions
+- `srv`: Service definitions

@@ -1,4 +1,4 @@
-# `services`
+# `srv`
 
 Defines the steps to deploy various services in my homelab using Docker/Podman Compose
 

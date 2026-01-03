@@ -1,0 +1,22 @@
+# `host.containers.internal` resolves to host's IP
+# See https://blog.podman.io/2024/10/podman-5-3-changes-for-improved-networking-experience-with-pasta/
+
+adguard.lab {
+	reverse_proxy host.containers.internal:8080
+	tls internal
+}
+ 
+seafile.lab {
+	reverse_proxy host.containers.internal:8081
+	tls internal
+}
+
+immich.lab {
+	reverse_proxy host.containers.internal:8082
+	tls internal
+}
+
+cockpit.lab {
+	reverse_proxy host.containers.internal:9090
+	tls internal
+}

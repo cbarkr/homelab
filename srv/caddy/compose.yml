@@ -1,0 +1,15 @@
+name: caddy
+
+services:
+  caddy:
+    container_name: caddy_server
+    image: docker.io/caddy:2.11
+    ports:
+      - '8000:80/tcp'
+      - '4443:443/udp'
+      - '4443:443/tcp'
+    volumes:
+      - ${PWD}/conf:/etc/caddy
+      - ${DATA_DIR}:/data
+      - ${CONF_DIR}:/config
+    restart: always

@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Activate `.env` relative to script location
-dirname="$(dirname "$0")"
-envpath="$dirname/.env"
+dirpath="$(dirname "$0")"
+envpath="$dirpath/.env"
 source "$envpath"
 
 # Set vars for backup

@@ -1,0 +1,11 @@
+name: uptime-kuma
+
+services:
+  uptime-kuma:
+    container_name: uptime_kuma_server
+    image: docker.io/louislam/uptime-kuma:2
+    volumes:
+      - ${DATA_DIR}:/app/data
+    ports:
+      - '8083:3001'
+    restart: always

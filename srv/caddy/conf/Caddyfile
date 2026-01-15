@@ -16,6 +16,11 @@ immich.lab {
 	tls internal
 }
 
+uptime.lab {
+	reverse_proxy host.containers.internal:8083
+	tls internal
+}
+
 cockpit.lab {
 	reverse_proxy host.containers.internal:9090
 	tls internal

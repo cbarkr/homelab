@@ -9,7 +9,7 @@ services:
       - '4443:443/udp'
       - '4443:443/tcp'
     volumes:
-      - ${PWD}/conf:/etc/caddy
+      - ./conf:/etc/caddy
       - ${DATA_DIR}:/data
       - ${CONF_DIR}:/config
     restart: always

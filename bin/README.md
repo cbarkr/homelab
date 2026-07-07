@@ -1,6 +1,6 @@
 # `bin`
 
-Contains scripts for various tasks, such as backups
+Contains scripts for various tasks, such as installation and backups
 
 ## Configuration
 
